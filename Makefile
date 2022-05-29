@@ -2,6 +2,9 @@ IMAGE := base-repository-template
 VERSION := 0.0.1
 REGISTRY_URL := ghcr.io/apinanyogaratnam/${IMAGE}:${VERSION}
 
+activate-venv:
+	source venv/bin/activate
+
 build:
 	docker build -t ${IMAGE} .
 
