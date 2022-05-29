@@ -50,4 +50,4 @@ push:
 	git push --tags
 
 all:
-	make build && make auth && make tag && make tag-client && make push
+	make build && make build-client && make auth && make tag && make tag-client && make push
