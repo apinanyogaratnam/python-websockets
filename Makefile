@@ -6,6 +6,12 @@ REGISTRY_URL_LATEST := ghcr.io/apinanyogaratnam/${IMAGE}:latest
 activate-venv:
 	source venv/bin/activate
 
+start-client:
+	python3 -m http.server 3000
+
+start-server:
+	python3 main.py
+
 build:
 	docker build -t ${IMAGE} .
 
