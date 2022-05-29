@@ -7,7 +7,7 @@ async def echo(websocket, path):
         await websocket.send(f'received message: {message}')
 
 
-start_server = websockets.serve(echo, 'localhost', 8000)
+start_server = websockets.serve(echo, '0.0.0.0', 8000)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
